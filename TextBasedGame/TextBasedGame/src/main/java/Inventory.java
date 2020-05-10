@@ -47,18 +47,26 @@ public class Inventory {
     }
     
     public void takeItem(String item, int amount) {
-        if (item.equals("Leather")) {
-            leather-=amount;
-        } else if (item.equals("Bone")) {
-            bone-=amount;
-        } else if (item.equals("Fangs")) {
-            fangs-=amount;
-        } else if (item.equals("Bear Skin")) {
-            bearskin-=amount;
-        } else if (item.equals("Elephant Trunk")) {
-            trunk-=amount;
-        } else if (item.equals("Golden Crown")) {
-            crown-=amount;
+
+        switch(item) {
+            case "Leather":
+                leather -= amount;
+                break;
+            case "Bone":
+                bone -= amount;
+                break;
+            case "Fangs":
+                fangs -= amount;
+                break;
+            case "Bear Skin":
+                bearskin -= amount;
+                break;
+            case "Elephant Trunk":
+                trunk -= amount;
+                break;
+            case "Golden Crown":
+                crown -= amount;
+                break;
         }
     }
     
